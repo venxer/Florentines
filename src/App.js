@@ -42,7 +42,11 @@ function App() {
             setYesFontSize(yesFontSize + 5);
             setNoFontSize(noFontSize - 4)
           }}
-          onClick={() => moveBtn()}
+          onClick={() => {
+            moveBtn();
+            setYesFontSize(yesFontSize + 5);
+            setNoFontSize(noFontSize - 4)
+          }}
         >
           No 😔
         </button>
