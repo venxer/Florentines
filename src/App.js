@@ -1,8 +1,13 @@
-import './App.css';
+import "./App.css";
 import Miffy from "./miffy.png";
+import { useState, useEffect } from "react";
+
 function App() {
+  const [yesFontSize, setYesFontSize] = useState(50);
+  const [noFontSize, setNoFontSize] = useState(50);
+
   const moveBtn = () => {
-    const btn = document.querySelector(".noBtn")
+    const btn = document.querySelector(".noBtn");
 
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
@@ -15,19 +20,32 @@ function App() {
     btn.style.position = "absolute";
     btn.style.left = `${randomLeft}px`;
     btn.style.top = `${randomTop}px`;
-  }
+  };
 
   return (
     <div className="app">
-      <img src={Miffy}
-           className='center'/>
+      <img src={Miffy} alt="Miffy" className="center" />
       <h1>Will you be my Valentines? 💕</h1>
-      <div className='buttons'>
-        <button className="yesBtn"
-                onClick={() => alert("Awwwww Thank You")}>Yes 🥰</button>
-        <button className="noBtn"
-                onMouseOver={() => moveBtn()}
-                onClick={() => moveBtn()}>No 😔</button>
+      <div className="buttons">
+        <button
+          className="yesBtn"
+          style={{ fontSize: `${yesFontSize}px` }}
+          onClick={() => alert("Awwwww Thank You")}
+        >
+          Yes 🥰
+        </button>
+        <button
+          className="noBtn"
+          style={{ fontSize: `${noFontSize}px` }}
+          onMouseOver={() => {
+            moveBtn();
+            setYesFontSize(yesFontSize + 5);
+            setNoFontSize(noFontSize - 4)
+          }}
+          onClick={() => moveBtn()}
+        >
+          No 😔
+        </button>
       </div>
     </div>
   );
