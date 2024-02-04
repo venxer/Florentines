@@ -19,12 +19,17 @@ h1
 }
 body
 {
-    background-color: #F8C8DC;
+    background-color: #bc70d4;
+}
+img
+{
+    max-width: 25%;
+    height: auto;
 }
 .center 
 {
     display: block;
-    margin-left: 42%;
+    margin-left: auto;
     margin-right: auto;
 }  
 .buttons

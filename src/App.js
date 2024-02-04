@@ -1,5 +1,5 @@
 import "./App.css";
-import Miffy from "./miffy.png";
+import Miffy from "./dog.png";
 import swal from 'sweetalert';
 import { useState, useEffect } from "react";
 
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="app">
       <img src={Miffy} alt="Miffy" className="center" />
-      <h1>Will you be Edwin's Valentine? 💕</h1>
+      <h1>Will you be Dylan's Valentine? 💕</h1>
       <div className="buttons">
         <button
           className="yesBtn"
@@ -37,7 +37,7 @@ function App() {
             buttons: "🫶"
           })}
         >
-          Yes 🥰
+          Yes 🫶
         </button>
         <button
           className="noBtn"
@@ -53,7 +53,7 @@ function App() {
             setNoFontSize(noFontSize - 4)
           }}
         >
-          No 😔
+          No 👹
         </button>
       </div>
     </div>
