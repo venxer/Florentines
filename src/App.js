@@ -1,5 +1,6 @@
 import "./App.css";
 import Miffy from "./miffy.png";
+import swal from 'sweetalert';
 import { useState, useEffect } from "react";
 
 function App() {
@@ -30,7 +31,11 @@ function App() {
         <button
           className="yesBtn"
           style={{ fontSize: `${yesFontSize}px` }}
-          onClick={() => alert("Awwwww Thank You")}
+          onClick={() => swal({
+            title: "Awwwwww",
+            text: "I LOVE YOUUUUU",
+            buttons: "🫶"
+          })}
         >
           Yes 🥰
         </button>
