@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="app">
       <img src={Miffy} alt="Miffy" className="center" />
-      <h1>Will you be my Valentine? 💕</h1>
+      <h1>Will you be Edwin's Valentine? 💕</h1>
       <div className="buttons">
         <button
           className="yesBtn"
